@@ -101,15 +101,8 @@ export default function Home() {
             <button type="submit" className={styles.joinButton}>
               JOIN WAITLIST
             </button>
-            <button onClick={handleAddMiniApp} type="button" className={styles.joinButton}>
+            <button onClick={handleAddMiniApp} type="submit" className={styles.joinButton}>
               NOTIFICATIONS
-            </button>
-            <button 
-              onClick={() => router.push("/sign-in")} 
-              type="button" 
-              className={styles.joinButton}
-            >
-              SIGN IN OPTION
             </button>
           </form>
         </div>

@@ -128,3 +128,8 @@
   box-shadow: 0 2px 15px rgba(247, 217, 84, 0.3);
 }
 
+.hodlerButtonWrapper {
+  width: 100%;
+  max-width: 400px;
+}
+

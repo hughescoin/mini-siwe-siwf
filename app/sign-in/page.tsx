@@ -2,24 +2,14 @@
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import { Login } from "../components/siwf";
+import { SignInWithBase } from "../components/siwb/swib";
 
 export default function SignIn() {
   const router = useRouter();
 
-  const handleSIWE = () => {
-    // TODO: Implement SIWE (Sign-In with Ethereum) logic
-    console.log("SIWE button clicked");
-  };
-
-  const handleSIFW = () => {
-    // TODO: Implement SIFW (Sign-In with Farcaster/Wallet) logic
-    console.log("SIFW button clicked");
-  };
-
   return (
     <div className={styles.container}>
       <div className={styles.topButtons}>
-        <Login />
         <button 
           className={styles.contextButton} 
           type="button"
@@ -41,20 +31,12 @@ export default function SignIn() {
           </p>
 
           <div className={styles.buttonContainer}>
-            <button 
-              onClick={handleSIWE} 
-              className={styles.hodlerButton}
-              type="button"
-            >
-              SIWE
-            </button>
-            <button 
-              onClick={handleSIFW} 
-              className={styles.hodlerButton}
-              type="button"
-            >
-              SIFW
-            </button>
+            <div className={styles.hodlerButtonWrapper}>
+              <SignInWithBase />
+            </div>
+            <div className={styles.hodlerButtonWrapper}>
+              <Login />
+            </div>
           </div>
         </div>
       </div>
