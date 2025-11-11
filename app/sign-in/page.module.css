@@ -1,0 +1,129 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  color: white;
+  position: relative;
+}
+
+.topButtons {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.contextButton {
+  background: #f7d954;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.contextButton:hover {
+  background: #f5d73a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(247, 217, 84, 0.4);
+}
+
+.closeButton {
+  background: none;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 2rem;
+}
+
+.signInForm {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.hodlerButton {
+  background: #f7d954;
+  color: #000;
+  border: none;
+  padding: 1.25rem 4rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 20px rgba(247, 217, 84, 0.3);
+  width: 100%;
+  max-width: 400px;
+  min-height: 60px;
+}
+
+.hodlerButton:hover {
+  background: #f5d73a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(247, 217, 84, 0.4);
+}
+
+.hodlerButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 15px rgba(247, 217, 84, 0.3);
+}
+

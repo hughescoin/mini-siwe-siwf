@@ -2,6 +2,8 @@
 import { ReactNode } from "react";
 import { base } from "wagmi/chains";
 import { OnchainKitProvider } from "@coinbase/onchainkit";
+import { AuthKitProvider } from '@farcaster/auth-kit';
+import { siwfConfig } from "./components/siwf/page";
 import "@coinbase/onchainkit/styles.css";
 
 export function RootProvider({ children }: { children: ReactNode }) {
@@ -24,7 +26,9 @@ export function RootProvider({ children }: { children: ReactNode }) {
         notificationProxyUrl: undefined,
       }}
     >
-      {children}
+      <AuthKitProvider config={siwfConfig}>
+        {children}
+      </AuthKitProvider>
     </OnchainKitProvider>
   );
 }

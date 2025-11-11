@@ -4,6 +4,7 @@ import { sdk } from '@farcaster/miniapp-sdk'
 import { useRouter } from "next/navigation";
 import { minikitConfig } from "../minikit.config";
 import styles from "./page.module.css";
+import { AuthKitProvider } from '@farcaster/auth-kit';
 
 export default function Home() {
   const [email, setEmail] = useState("");
