@@ -4,7 +4,7 @@ import { sdk } from '@farcaster/miniapp-sdk'
 import { useRouter } from "next/navigation";
 import { minikitConfig } from "../minikit.config";
 import styles from "./page.module.css";
-import { AuthKitProvider } from '@farcaster/auth-kit';
+
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -101,8 +101,15 @@ export default function Home() {
             <button type="submit" className={styles.joinButton}>
               JOIN WAITLIST
             </button>
-            <button onClick={handleAddMiniApp} type="submit" className={styles.joinButton}>
+            <button onClick={handleAddMiniApp} type="button" className={styles.joinButton}>
               NOTIFICATIONS
+            </button>
+            <button 
+              onClick={() => router.push("/sign-in")} 
+              type="button" 
+              className={styles.joinButton}
+            >
+              SIGN IN OPTION
             </button>
           </form>
         </div>

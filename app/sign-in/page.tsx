@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
-import { Login } from "../components/siwf/page";
+import { Login } from "../components/siwf";
 
 export default function SignIn() {
   const router = useRouter();
