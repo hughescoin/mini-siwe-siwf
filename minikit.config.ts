@@ -1,4 +1,4 @@
-const ROOT_URL = "siwe-mini.vercel.app";
+const ROOT_URL = "https://siwe-mini.vercel.app";
 
 /**
  * MiniApp configuration object. Must follow the Farcaster MiniApp specification.
