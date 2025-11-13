@@ -7,7 +7,7 @@ import "./globals.css";
 
 const miniapp = {
   version: "1",
-  imageUrl: minikitConfig.frame.heroImageUrl,
+  imageUrl: minikitConfig.miniapp.heroImageUrl,
   button: {
     title: `Woopsie Doopsie`,
     action: {
@@ -39,20 +39,15 @@ const miniapp = {
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: minikitConfig.frame.name,
-    description: minikitConfig.frame.description,
+    title: minikitConfig.miniapp.name,
+    description: minikitConfig.miniapp.description,
+    openGraph: {
+      title: minikitConfig.miniapp.name,
+      description: minikitConfig.miniapp.description,
+    },
     other: {
-      "fc:frame": JSON.stringify({
-        version: minikitConfig.frame.version,
-        imageUrl: minikitConfig.frame.heroImageUrl,
-        button: {
-          title: `Join the ${minikitConfig.frame.name} Waitlist`,
-          action: {
-            name: `Launch ${minikitConfig.frame.name}`,
-            type: "launch_frame",
-          },
-        },
-      }),
+      "fc:miniapp": JSON.stringify(miniapp),
+      'base:miniapp': JSON.stringify(miniapp),
     },
   };
 }
