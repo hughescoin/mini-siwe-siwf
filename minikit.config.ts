@@ -1,4 +1,4 @@
-const ROOT_URL = process.env.NEXT_PUBLIC_URL || process.env.VERCEL_URL;
+const ROOT_URL = "siwe-mini.vercel.app";
 
 /**
  * MiniApp configuration object. Must follow the Farcaster MiniApp specification.
@@ -6,11 +6,11 @@ const ROOT_URL = process.env.NEXT_PUBLIC_URL || process.env.VERCEL_URL;
  * @see {@link https://miniapps.farcaster.xyz/docs/guides/publishing}
  */
 export const minikitConfig = {
-  "accountAssociation": {
-    "header": "eyJmaWQiOjE3MzE4LCJ0eXBlIjoiY3VzdG9keSIsImtleSI6IjB4NzYwQjA0NDc5NjM4MTExNzNmRjg3YTRBYzA5OEJBQ0YxNzNCYkU0OCJ9",
-    "payload": "eyJkb21haW4iOiJ3YWl0bGlzdC1xcy52ZXJjZWwuYXBwIn0",
-    "signature": "MHhmNGQzN2M2OTk4NDIwZDNjZWVjYTNiODllYzJkMjAwOTkyMDEwOGVhNTFlYWI3NjAyN2QyMmM1MDVhNzIyMWY2NTRiYmRlZmQ0MTUwOWNiY2M2NmI2Y2VmNGZiMmZiOGYzNDVjODVmNmQ3ZTVjNzI3OWNmMGY4ZTA2ODYzM2FjZjFi"
-  },
+    "accountAssociation": {
+      "header": "eyJmaWQiOjE3MzE4LCJ0eXBlIjoiYXV0aCIsImtleSI6IjB4QzZDODNGMzE3NDYxZGQxZjVGZjY3QjIxNzcyZmY2NDIyNkQ3M2IxNiJ9",
+      "payload": "eyJkb21haW4iOiJzaXdlLW1pbmkudmVyY2VsLmFwcCJ9",
+      "signature": "ss/R3tDWzNGrgECfFn1Yd+j/ighMNS8N6JTIW12cnehe6lW8znRO3mo+yMOijWLzizVO4Yaz1JuY2SV0+1fFwBw="
+    },
   miniapp: {
     version: "1",
     name: "NotCubey", 
@@ -29,7 +29,7 @@ export const minikitConfig = {
     ogTitle: "",
     ogDescription: "",
     ogImageUrl: `${ROOT_URL}/blue-hero.png`,
-    noindex: true,
+    noindex: false,
   },
   baseBuilder: {
     "allowedAddresses": ["0x5993B8F560E17E438310c76BCac1Af3E6DA2A58A"]
