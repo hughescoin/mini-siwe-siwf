@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import '@farcaster/auth-kit/styles.css';
 import { SignInButton } from '@farcaster/auth-kit';

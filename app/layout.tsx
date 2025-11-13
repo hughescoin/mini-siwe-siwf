@@ -3,6 +3,7 @@ import { Inter, Source_Code_Pro } from "next/font/google";
 import { SafeArea } from "@coinbase/onchainkit/minikit";
 import { minikitConfig } from "../minikit.config";
 import { RootProvider } from "./rootProvider";
+import { AuthProvider } from "./authProvider";
 import "./globals.css";
 
 const miniapp = {
@@ -69,11 +70,13 @@ export default function RootLayout({
 }>) {
   return (
     <RootProvider>
-      <html lang="en">
-        <body className={`${inter.variable} ${sourceCodePro.variable}`}>
-          <SafeArea>{children}</SafeArea>
-        </body>
-      </html>
+      <AuthProvider>
+        <html lang="en">
+          <body className={`${inter.variable} ${sourceCodePro.variable}`}>
+            <SafeArea>{children}</SafeArea>
+          </body>
+        </html>
+      </AuthProvider>
     </RootProvider>
   );
 }
