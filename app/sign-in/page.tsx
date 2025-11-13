@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import { Login } from "../components/siwf";
 import { SignInWithBase } from "../components/siwb/swib";
+import { CloseButton } from "../components/CloseButton";
 
 export default function SignIn() {
   const router = useRouter();
@@ -17,9 +18,7 @@ export default function SignIn() {
         >
           Home
         </button>
-        <button className={styles.closeButton} type="button">
-          ✕
-        </button>
+        <CloseButton className={styles.closeButton} />
       </div>
       
       <div className={styles.content}>
