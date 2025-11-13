@@ -5,7 +5,6 @@ import { SignInWithBaseButton } from '@base-org/account-ui/react';
 
 export const sdk = createBaseAccountSDK({
     appName: 'Siwe Mini',
-    appLogo: 'https://base.org/logo.png',
 });
 
 const handleSignIn = async () => {
