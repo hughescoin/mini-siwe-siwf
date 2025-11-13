@@ -11,7 +11,7 @@ export const minikitConfig = {
     "payload": "eyJkb21haW4iOiJ3YWl0bGlzdC1xcy52ZXJjZWwuYXBwIn0",
     "signature": "MHhmNGQzN2M2OTk4NDIwZDNjZWVjYTNiODllYzJkMjAwOTkyMDEwOGVhNTFlYWI3NjAyN2QyMmM1MDVhNzIyMWY2NTRiYmRlZmQ0MTUwOWNiY2M2NmI2Y2VmNGZiMmZiOGYzNDVjODVmNmQ3ZTVjNzI3OWNmMGY4ZTA2ODYzM2FjZjFi"
   },
-  frame: {
+  miniapp: {
     version: "1",
     name: "NotCubey", 
     subtitle: "Not Your AI Ad Companion", 
