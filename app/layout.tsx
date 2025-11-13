@@ -5,6 +5,38 @@ import { minikitConfig } from "../minikit.config";
 import { RootProvider } from "./rootProvider";
 import "./globals.css";
 
+const miniapp = {
+  version: "1",
+  imageUrl: minikitConfig.frame.heroImageUrl,
+  button: {
+    title: `Woopsie Doopsie`,
+    action: {
+      name: `Launch Woopsie Doopsie`,
+      type: "launch_frame",
+    },
+  },
+  buttons: [
+    {
+      title: `Woopsie`,
+      action: {
+        type: "sdk_action",
+        sdkAction: "actions.composeCast",
+        options: {
+          text: "Woopsie Doopsie",
+          embeds: [process.env.NEXT_PUBLIC_URL || ""],
+        },
+      },
+    },
+    {
+      title: `Zoopsie`,
+      action: {
+        type: "launch_frame_tray",
+        url: process.env.NEXT_PUBLIC_URL 
+      },
+    },
+  ],  
+};
+
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: minikitConfig.frame.name,
