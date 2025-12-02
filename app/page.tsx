@@ -16,6 +16,15 @@ export default function Home() {
     sdk.actions.ready();
   }, []);
 
+  // Debug: Log environment variables
+  useEffect(() => {
+    console.log("=== Environment Variables Debug ===");
+    console.log("NEXT_PUBLIC_URL:", process.env.NEXT_PUBLIC_URL);
+    console.log("VERCEL_URL:", process.env.VERCEL_URL);
+    console.log("Combined:", process.env.NEXT_PUBLIC_URL || process.env.VERCEL_URL);
+    console.log("===================================");
+  }, []);
+
   // If you need to verify the user's identity, you can use the useQuickAuth hook.
   // This hook will verify the user's signature and return the user's FID. You can update
   // this to meet your needs. See the /app/api/auth/route.ts file for more details.
@@ -72,6 +81,13 @@ export default function Home() {
           onClick={() => router.push("/context")}
         >
           Context
+        </button>
+        <button 
+          className={styles.contextButton} 
+          type="button"
+          onClick={() => router.push("/sign-in")}
+        >
+          Sign In
         </button>
         <button className={styles.closeButton} type="button">
           ✕

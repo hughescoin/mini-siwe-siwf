@@ -18,7 +18,7 @@ const miniapp = {
   },
   buttons: [
     {
-      title: `Woopsie`,
+      title: `Compose Cast`,
       action: {
         type: "sdk_action",
         sdkAction: "actions.composeCast",
@@ -29,7 +29,14 @@ const miniapp = {
       },
     },
     {
-      title: `Zoopsie`,
+      title: `Launch Tray`,
+      action: {
+        type: "launch_frame_tray",
+        url: process.env.NEXT_PUBLIC_URL 
+      },
+    },
+    {
+      title: `Launch Tray`,
       action: {
         type: "launch_frame_tray",
         url: process.env.NEXT_PUBLIC_URL 
