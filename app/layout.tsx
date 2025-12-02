@@ -24,7 +24,7 @@ const miniapp = {
         sdkAction: "actions.composeCast",
         options: {
           text: "Woopsie Doopsie",
-          embeds: [process.env.NEXT_PUBLIC_URL || ""],
+          embeds: [process.env.VERCEL_URL || ""],
         },
       },
     },
@@ -32,14 +32,14 @@ const miniapp = {
       title: `Launch Tray`,
       action: {
         type: "launch_frame_tray",
-        url: process.env.NEXT_PUBLIC_URL 
+        url: process.env.VERCEL_URL 
       },
     },
     {
       title: `Launch Tray`,
       action: {
         type: "launch_frame_tray",
-        url: process.env.NEXT_PUBLIC_URL 
+        url: process.env.VERCEL_URL    
       },
     },
   ],  
