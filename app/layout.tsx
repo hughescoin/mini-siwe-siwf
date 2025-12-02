@@ -25,7 +25,7 @@ const miniapp = {
         sdkAction: "actions.composeCast",
         options: {
           text: "Woopsie Doopsie",
-          embeds: [process.env.ROOT_URL || ""],
+          embeds: [ROOT_URL || ""],
         },
       },
     },
@@ -33,14 +33,14 @@ const miniapp = {
       title: `Launch Tray`,
       action: {
         type: "launch_frame_tray",
-        url: process.env.ROOT_URL 
+        url: ROOT_URL 
       },
     },
     {
       title: `Launch Tray`,
       action: {
         type: "launch_frame_tray",
-        url: process.env.ROOT_URL    
+        url: ROOT_URL    
       },
     },
   ],  
