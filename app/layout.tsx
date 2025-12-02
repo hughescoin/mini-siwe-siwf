@@ -5,6 +5,7 @@ import { minikitConfig } from "../minikit.config";
 import { RootProvider } from "./rootProvider";
 import { AuthProvider } from "./authProvider";
 import "./globals.css";
+import { ROOT_URL } from "../minikit.config";
 
 const miniapp = {
   version: "1",
@@ -24,7 +25,7 @@ const miniapp = {
         sdkAction: "actions.composeCast",
         options: {
           text: "Woopsie Doopsie",
-          embeds: [process.env.VERCEL_URL || ""],
+          embeds: [process.env.ROOT_URL || ""],
         },
       },
     },
@@ -32,14 +33,14 @@ const miniapp = {
       title: `Launch Tray`,
       action: {
         type: "launch_frame_tray",
-        url: process.env.VERCEL_URL 
+        url: process.env.ROOT_URL 
       },
     },
     {
       title: `Launch Tray`,
       action: {
         type: "launch_frame_tray",
-        url: process.env.VERCEL_URL    
+        url: process.env.ROOT_URL    
       },
     },
   ],  
