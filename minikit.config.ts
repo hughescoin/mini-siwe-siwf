@@ -32,7 +32,7 @@ export const minikitConfig = {
     noindex: false,
   },
   baseBuilder: {
-    "allowedAddresses": ["0x5993B8F560E17E438310c76BCac1Af3E6DA2A58A"]
+    ownerAddress: "0x5993B8F560E17E438310c76BCac1Af3E6DA2A58A"
   }
 
 } as const;
